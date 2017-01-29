@@ -1,5 +1,4 @@
 #!/bin/bash
-
 DOCKER_SOCKET="/var/run/docker.sock"
 DOCKER_GROUP="dockerhost"
 JENKINS_USER="jenkins"
