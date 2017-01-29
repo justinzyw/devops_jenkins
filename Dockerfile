@@ -1,5 +1,5 @@
 FROM jenkins:2.32.1
-LABEL Version="0.1"
+TAG justinzyw/devops_jenkins:0.1
 
 COPY ["entrypoint.sh", "/"]
 
