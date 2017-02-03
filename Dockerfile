@@ -8,6 +8,4 @@ RUN apt-get update && \
     apt-get install sudo && \
     chmod 755 /entrypoint.sh
     
-USER jenkins
-
 ENTRYPOINT ["/bin/bash","-c","./entrypoint.sh"]
