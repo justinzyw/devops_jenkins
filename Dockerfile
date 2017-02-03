@@ -1,4 +1,4 @@
-FROM jenkins:2.32.1
+FROM jenkins:2.32.2
 
 COPY ["entrypoint.sh", "/"]
 
@@ -7,5 +7,7 @@ USER root
 RUN apt-get update && \
     apt-get install sudo && \
     chmod 755 /entrypoint.sh
+    
+USER jenkins
 
 ENTRYPOINT ["/bin/bash","-c","./entrypoint.sh"]
