@@ -1,4 +1,4 @@
-FROM jenkins:lastest
+FROM jenkins:latest
 
 COPY ["entrypoint.sh", "/"]
 
