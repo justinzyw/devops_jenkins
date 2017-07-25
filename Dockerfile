@@ -5,7 +5,7 @@ COPY ["entrypoint.sh", "/"]
 USER root
 
 RUN apt-get update && \
-    apt-get install sudo vim && \
+    apt-get install --yes --force-yes sudo vim && \
     chmod 755 /entrypoint.sh
     
 ENTRYPOINT ["/bin/bash","-c","./entrypoint.sh"]
