@@ -1,7 +1,7 @@
 #!/bin/bash
 DOCKER_SOCKET="/var/run/docker.sock"
 DOCKER_GROUP="dockerhost"
-JENKINS_USER="jenkins"
+JENKINS_USER="root"
 
 if [ -S ${DOCKER_SOCKET} ]; then
     DOCKER_GID=$(stat -c '%g' ${DOCKER_SOCKET})
@@ -9,4 +9,4 @@ if [ -S ${DOCKER_SOCKET} ]; then
     usermod -aG ${DOCKER_GROUP} ${JENKINS_USER}
 fi
 
-exec sudo -E -H -u jenkins bash -c /usr/local/bin/jenkins.sh
+exec sudo -E -H -u ${JENKINS_USER} bash -c /usr/local/bin/jenkins.sh
