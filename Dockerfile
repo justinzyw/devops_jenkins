@@ -1,4 +1,4 @@
-FROM jenkins:2.60.3-alpine
+FROM jenkins:2.60.3
 
 COPY ["entrypoint.sh", "/"]
 
